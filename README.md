@@ -4,7 +4,7 @@ Using React for front-end
 
 Firebase for back end
 
-# Deployed ot Firebase
+Deployed on Firebase (soon)
 
 # CSS
 
