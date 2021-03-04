@@ -1,8 +1,14 @@
 # Amazon Clone 
 
-Using React for front-end
+Using React for front-end 
 
 Firebase for back end
+
+# Deployed ot Firebase
+
+# CSS
+
+Following BEM CSS Convention.
 
 # Getting Started with Create React App
 
