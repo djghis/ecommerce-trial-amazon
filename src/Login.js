@@ -14,6 +14,12 @@ function Login() {
     const signIn = (e) => {
         e.preventDefault();
         //Firebse login
+        auth.signInWithEmailAndPassword(email, password).then(
+            auth => {
+                history.push('/')
+            }).catch(
+                error => alert(error.message)
+            )        
     }
 
     const register = (e) => {
@@ -23,7 +29,7 @@ function Login() {
         ((auth) => {
             // console.log('auth', auth)
             if (auth) {
-                history.push('/')
+                history.push('/')  //used for redirecting to home or last page visited.
             }
         }).catch(
             error => alert(error.message)
