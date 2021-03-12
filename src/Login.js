@@ -1,12 +1,34 @@
 import React from 'react';
 import { useState } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import './Login.css';
+import { auth } from './firebase';  //import from local firebase file;
+
 
 
 function Login() {
+    const history = useHistory();
     const [email, setEmail] = useState('');
     const [password, setPassword] = useState('');
+
+    const signIn = (e) => {
+        e.preventDefault();
+        //Firebse login
+    }
+
+    const register = (e) => {
+        e.preventDefault();
+        //firebase register    createUserWithEmailAndPassword is a firebase functionName you cannot use another 1!
+        auth.createUserWithEmailAndPassword(email, password).then
+        ((auth) => {
+            // console.log('auth', auth)
+            if (auth) {
+                history.push('/')
+            }
+        }).catch(
+            error => alert(error.message)
+        )
+    }
 
     return (
         <div className="login">
@@ -24,14 +46,18 @@ function Login() {
                     <h5>Password</h5>
                     <input type="password" value={password} onChange={e => setPassword(e.target.value)} />
 
-                    <button className="login__signInButton">Sign-in</button>
+                    <button type="submit"
+                        onClick={signIn}
+                         className="login__signInButton">Sign-in</button>
                 </form>
 
                 <p>
                     By siging-in you agree to Funky Frog's conditions of use & sale. Please see out privacy notice, our cookies notice and our interest based ads notice.
                 </p>
 
-                <button className="login__registerButton">Create an account</button>
+                <button type="submit"
+                 onClick={register}
+                 className="login__registerButton">Create an account</button>
 
             </div>     
         </div>
