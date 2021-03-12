@@ -2,7 +2,7 @@
 
 Using React for front-end 
 
-Firebase for back end
+Firebase for back end (authentification).
 
 Deployed on Firebase (soon)
 
