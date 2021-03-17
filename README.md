@@ -12,6 +12,8 @@ Following BEM CSS Convention.
 
 # Live Site
 
+As this site is still in development this might not be the latest version.
+
 https://clone-99b81.web.app/
 
 # Getting Started with Create React App
