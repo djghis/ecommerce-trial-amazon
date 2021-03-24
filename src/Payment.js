@@ -13,11 +13,11 @@ function Payment() {
     const history = useHistory();
 
     const [{user, basket}, dispatch] = useStateValue();
-    
+
     const [error, setError] = useState(null);
     const [disabled, setDisabled] = useState(true);
     const [processing, setProcessing] = useState("");
-    const [succeeded, setSucceeded] = useState(true); 
+    const [succeeded, setSucceeded] = useState(false); 
     const [clientSecret, setClientSecret] = useState(true);  //for stripe
 
     //get a request to stripe to allow the payment to go thru. It will run everytime the basket get updated with the right amount.
@@ -31,6 +31,8 @@ function Payment() {
         }
         getClientSecret(); //to run the function
     }, [basket])
+
+    console.log(`clientSecret`, clientSecret);
 
     const stripe = useStripe();
     const elements = useElements();
@@ -49,7 +51,7 @@ function Payment() {
             setError(null);
             setProcessing(false);
 
-            history.replaceState('/orders')
+            history.replace('/orders')
         }) 
     }
 
