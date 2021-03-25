@@ -18,6 +18,12 @@ const reducer = (state, action) => {
                 basket: [...state.basket, action.item]
             };
 
+        case 'EMPTY_BASKET':
+            return {
+                ...state,
+                basket: []
+            };
+
         case 'REMOVE_FROM_BASKET':
             // this is there if an item keep the same id when added multiple times in the basket.
             const index = state.basket.findIndex(

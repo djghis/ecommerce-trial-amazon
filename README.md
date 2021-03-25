@@ -4,6 +4,8 @@ Using React for front-end
 
 Firebase/express back end with authentification.
 
+the database(firestore) might not be working as I switch it off to not get charge while not working on the app.
+
 Deployed on Firebase (soon)
 
 # CSS
