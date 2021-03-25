@@ -22,7 +22,9 @@ The app is running on Stripe test payment use card 4242 4242 4242 4242  MM/YY 42
 This will simulate payment and let you access your past orders. 
 
 
-
+### BECAREFULL
+esLint disabled firebase.json so errors will not be detected before deploying if you use my files.
+(error on line 18 detected by eslint but working when disabled.)
 
 # Getting Started with Create React App
 
