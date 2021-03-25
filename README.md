@@ -4,9 +4,9 @@ Using React for front-end
 
 Firebase/express back end with authentification.
 
-the database(firestore) might not be working as I switch it off to not get charge while not working on the app.
+the database(firestore) might not be working as I switch it off when not working on the app to avoid charges.
 
-Deployed on Firebase (soon)
+Deployed on Firebase.
 
 # CSS
 
@@ -17,6 +17,12 @@ Following BEM CSS Convention.
 As this site is still in development this might not be the latest version.
 
 https://clone-99b81.web.app/
+
+The app is running on Stripe test payment use card 4242 4242 4242 4242  MM/YY 4242 cvc 424 zip 42424
+This will simulate payment and let you access your past orders. 
+
+
+
 
 # Getting Started with Create React App
 
